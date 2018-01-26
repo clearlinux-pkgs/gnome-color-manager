@@ -4,7 +4,7 @@
 #
 Name     : gnome-color-manager
 Version  : 3.26.0
-Release  : 1
+Release  : 2
 URL      : https://download.gnome.org/sources/gnome-color-manager/3.26/gnome-color-manager-3.26.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-color-manager/3.26/gnome-color-manager-3.26.0.tar.xz
 Summary  : No detailed summary available
@@ -27,6 +27,7 @@ BuildRequires : pkgconfig(libexif)
 BuildRequires : pkgconfig(libtiff-4)
 BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : python3
+Patch1: 0001-build-set-pkgdatadir-to-gnome-color-manager.patch
 
 %description
 GNOME Color Manager
@@ -69,13 +70,14 @@ locales components for the gnome-color-manager package.
 
 %prep
 %setup -q -n gnome-color-manager-3.26.0
+%patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1516920234
+export SOURCE_DATE_EPOCH=1516988762
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Denable-packagekit=false -Denable-exiv=false builddir
 ninja -v -C builddir
 
