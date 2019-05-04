@@ -4,7 +4,7 @@
 #
 Name     : gnome-color-manager
 Version  : 3.32.0
-Release  : 10
+Release  : 11
 URL      : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Summary  : GNOME Color Profile Tools
@@ -21,6 +21,7 @@ BuildRequires : exiv2-dev
 BuildRequires : itstool
 BuildRequires : pkgconfig(colord)
 BuildRequires : pkgconfig(colord-gtk)
+BuildRequires : pkgconfig(exiv2)
 BuildRequires : pkgconfig(gio-2.0)
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(lcms2)
@@ -96,8 +97,14 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552067580
-export LDFLAGS="${LDFLAGS} -fno-lto"
+export SOURCE_DATE_EPOCH=1556986687
+export AR=gcc-ar
+export RANLIB=gcc-ranlib
+export NM=gcc-nm
+export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 CFLAGS="$CFLAGS" CXXFLAGS="$CXXFLAGS" LDFLAGS="$LDFLAGS" meson --prefix /usr --buildtype=plain -Denable-packagekit=false -Denable-exiv=false  builddir
 ninja -v -C builddir
 
