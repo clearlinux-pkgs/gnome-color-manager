@@ -4,7 +4,7 @@
 #
 Name     : gnome-color-manager
 Version  : 3.32.0
-Release  : 11
+Release  : 12
 URL      : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Summary  : GNOME Color Profile Tools
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556986687
+export SOURCE_DATE_EPOCH=1557002130
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
