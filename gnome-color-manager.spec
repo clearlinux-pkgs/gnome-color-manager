@@ -4,7 +4,7 @@
 #
 Name     : gnome-color-manager
 Version  : 3.32.0
-Release  : 12
+Release  : 13
 URL      : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-color-manager/3.32/gnome-color-manager-3.32.0.tar.xz
 Summary  : GNOME Color Profile Tools
