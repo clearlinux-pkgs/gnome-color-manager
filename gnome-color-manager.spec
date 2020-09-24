@@ -4,7 +4,7 @@
 #
 Name     : gnome-color-manager
 Version  : 3.36.0
-Release  : 14
+Release  : 15
 URL      : https://download.gnome.org/sources/gnome-color-manager/3.36/gnome-color-manager-3.36.0.tar.xz
 Source0  : https://download.gnome.org/sources/gnome-color-manager/3.36/gnome-color-manager-3.36.0.tar.xz
 Summary  : No detailed summary available
